@@ -27,7 +27,7 @@ def main():
   with open(f"{path}/part_1/answer.txt", "w") as f: pass
 
   with open(f"{path}/part_2/part_2.py", "w") as f:
-    f.write("import sys\nsys.path.append(\"../part_1/\")\n\ndef main():\n  pass\n\nif __name__ == '__main__':\n  main()")
+    f.write("import sys\nsys.path.append(\"../part_1/\")\nfrom part_1 import get_data\n\ndef main():\n  pass\n\nif __name__ == '__main__':\n  main()")
 
   with open(f"{path}/part_2/prompt.md", "w") as f: pass
   with open(f"{path}/part_2/answer.txt", "w") as f: pass
