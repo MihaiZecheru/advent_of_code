@@ -2,12 +2,18 @@
 Setup the file structure for one day in the advent of code
 """
 
-import os
+import os, sys
 
 def main():
   print()
-  year = input("Year: ")
-  day = input("Day: ")
+
+  if len(sys.argv) != 3:
+    year = input("Year: ")
+    day = input("Day: ")
+  else:
+    year = sys.argv[1]
+    day = sys.argv[2]
+
   path = f"{year}/day_{day}"
 
   os.makedirs(f'{path}/part_1')
