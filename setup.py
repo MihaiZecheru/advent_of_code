@@ -20,7 +20,7 @@ def main():
   os.makedirs(f'{path}/part_2')
 
   with open(f"{path}/part_1/part_1.py", "w") as f:
-    f.write("\n\ndef main():\n  pass\n\nif __name__ == '__main__':\n  main()")
+    f.write("import os\n\ndef get_data(path=\"input.txt\"):\n  with open(os.path.join(os.getcwd(), path)) as f:\n    return f.readlines()\n\ndef main():\n  pass\n\nif __name__ == '__main__':\n  main()")
 
   with open(f"{path}/part_1/input.txt", "w") as f: pass
   with open(f"{path}/part_1/prompt.md", "w") as f: pass
