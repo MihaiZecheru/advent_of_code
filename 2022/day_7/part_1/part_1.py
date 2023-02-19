@@ -54,36 +54,6 @@ def execute_commands(cmds) -> Dir:
   current_dir = base_dir
   cmds.pop(0)
 
-  # cmds = [
-  #   "$ ls",
-  #   "150555 bch.lht",
-  #   "276291 ccqfdznj.sqg",
-  #   "dir csmqbhjv",
-  #   "dir czdqfr",
-  #   "dir fpfwfzrt",
-  #   "192660 qnbzgp",
-  #   "142026 rpphgdhp.jfr",
-  #   "dir sqphfslv",
-  #   "38077 tvpzh",
-  #   "$ cd csmqbhjv",
-  #   "$ ls",
-  #   "52822 bch.lht",
-  #   "dir dgj",
-  #   "dir fmmblb",
-  #   "dir hjwwtw",
-  #   "dir mtmhst",
-  #   "dir njsccfms",
-  #   "dir wmjsvq",
-  #   "$ cd dgj",
-  #   "$ ls",
-  #   "266484 bch.lht",
-  #   "dir brwncbh",
-  #   "dir dtdzsqps",
-  #   "216678 gvmdvcs.fmq",
-  #   "225948 mdjrhmhf",
-  #   "$ cd ..",
-  # ]
-
   for cmd in cmds:
     if cmd.startswith("$ cd"):
       # change directory
