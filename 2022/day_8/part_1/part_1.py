@@ -3,9 +3,9 @@ import os
 def get_data(path="input.txt"):
   with open(os.path.join(os.getcwd(), path)) as f:
     matrix = [list(l.strip()) for l in f.readlines()]
-    for i in range(len(matrix)):
-      for j in range(len(matrix[i])):
-        matrix[i][j] = int(matrix[i][j])
+    for item in matrix:
+      for j in range(len(item)):
+        item[j] = int(item[j])
     return matrix
 
 def check_top(tree_matrix, x: int, y: int, original_tree_height: int = -1, first_time: bool = True) -> bool:
